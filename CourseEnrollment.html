@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <h1>Course Enrollment</h1>
+    <form action="/enrollment" method="post">
+    <div>
+        <label for="course">Choose course</label>
+        <br>   
+        <input type="text" id="course" name="course" list="courses" placeholder="Type course name">
+      
+        <datalist id="courses">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="Java">
+            <option value="SQL">
+            <option value="Devops">
+            <option value="javaScript">
+        </datalist>
+
+    </div>
+    <br>
+    <div>
+        <label for="txtprog">Enrollment</label>
+        <progress id="txtprog" value="80" max="100">
+    </div>
+    <br>
+    <div>
+        <label for="txtmet">skill level</label>
+        <meter value="8" max="10"></meter>
+    </div>
+    <br>
+    <div>
+        <label for="txtemail">Email</label>
+        <input type="email" id="txtemail" name="txtemail" placeholder="Enter your email id" required>
+    </div>
+    <br>
+    <div>
+        <label for="txtrange">range</label>
+        <input type="range" id="txtrange" name="txtrange" >
+    </div>
+    <br>
+    <div>
+        <label for="txtb">join in days</label>
+        <input type="number" id="txtb" name="txtb" min="1" max="10" >
+    </div>
+    <br>
+    <div>
+        <label for="button"></label>
+        <input type="submit" id="button" name="button">
+    </div>
+    </form>
+</body>
+</html>
