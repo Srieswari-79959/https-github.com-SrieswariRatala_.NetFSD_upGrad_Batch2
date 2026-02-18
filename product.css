@@ -1,0 +1,35 @@
+body{
+    background-color: lightgray;
+}
+section{
+   margin-left: 300px;
+   width: 400px;
+   background-color: white; 
+   text-align: center;
+   height: 400px;
+
+}
+h1{
+    color: chocolate;
+}
+.txtsect ul{
+    list-style-type: none;
+    
+}
+.txtsect li{
+    
+          background-color: white;
+          margin-bottom: 25px;
+          margin-right: 40px;
+          height: 30px;
+          border: 1px solid black;
+          text-align: center;
+          padding-top: 10px;
+        }
+h1:hover{
+    color: aqua;
+}
+.txtsect li:hover{
+    color: aquamarine;
+    background-color: cadetblue;
+}

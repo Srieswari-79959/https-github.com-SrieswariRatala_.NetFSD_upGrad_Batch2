@@ -1,0 +1,42 @@
+
+div{
+    height: 360px;
+    width: 320px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 300px;
+    padding: 30px;
+    border: 5px solid blue;
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: rebeccapurple;
+    
+}
+h2{
+    text-align: center;
+    padding-bottom: 10px; 
+    color: darkorange; 
+    font-size: x-large;
+}
+p{
+    word-spacing: 10px;
+    text-align: center;
+    color: blueviolet;
+}
+button{
+    margin: 20px 110px;
+    background-color: blue;
+    width: 100px;
+    height: 50px;
+    color: white;
+    border: 2px solid wheat;
+    border-radius: 10px;
+}
+button:hover{
+    color: aqua;
+    background-color: blueviolet;
+}
