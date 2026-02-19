@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+}
+.name{
+    display: flex;
+    background-color: aqua;
+
+}
+#txtsearch{
+    height: 20px;
+    margin-top: 40px;
+    margin-left: 60px;
+
+    
+}
+#txtsearch :hover{
+    background-color: blue;
+}
+img{
+    width: 100px;
+    height: 100px;
+    margin-left: 500px;
+}
+h1{
+    margin-left: 200px;
+    margin-top: 30px;
+    color: brown;
+    
+
+
+}
+#nani{
+    flex-direction: row;
+    background-color: aqua;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    font-size: x-large;
+    
+    
+}
+a{
+    margin: 50px;
+    margin-top: 100px;
+    color: brown;
+}
+a:link{
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+#sree{
+    background-color: red;
+    width: 100px;
+    margin-left: 500px;
+    margin-bottom: 1000px;
+}
+.main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-left: 220px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            flex: 0 0 30%;
+            box-sizing: border-box;
+        }
+       
+        /* Mobile View */
+        @media (max-width: 768px) {
+            #nani {
+                flex-direction: column;
+            }
+
+            #nani {
+                width: 100%;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+        }
+        .card:hover{
+            color: orange;
+            background-color: aquamarine;
+        }
+.saii{
+    display: flex;
+}
