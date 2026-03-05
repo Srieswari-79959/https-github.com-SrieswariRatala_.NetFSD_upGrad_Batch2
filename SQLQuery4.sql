@@ -1,26 +1,52 @@
-CREATE DATABASE eshasai;
-	USE eshasai;
-CREATE TABLE Customer_order(
-	Order_Id    INT			 PRIMARY KEY,
-	First_Name  VARCHAR(50)  NOT NULL,
-	Last_Name   VARCHAR(45)  NOT NULL,
-	Order_date	DATETIME	 NOT NULL,
-	Order_status VARCHAR(50)	NOT NULL
+CREATE DATABASE Orders
+USE Orders
+CREATE TABLE Customer(
+	customer_Id			INT				PRIMARY KEY,
+	first_name			VARCHAR(50)	   NOT NULL,
+	last_name			VARCHAR(50)	   NOT NULL,
+	
+
 )
+INSERT INTO Customer VALUES
+(1,'Rahul','Sharma'),
+(2,'Anita','Verma'),
+(3,'Kiran','Reddy'),
+(4,'Sneha','Patel'),
+(5,'Arjun','Kumar'),
+(6,'Priya','Singh'),
+(7,'Vikas','Gupta'),
+(8,'Neha','Agarwal'),
+(9,'Rohit','Mehta'),
+(10,'Pooja','Nair');
 
-INSERT INTO Customer_order VALUES(1,'sri', 'Eswari',  '2026-03-19', 'Pending'),
-								 ( 2, 'Naga', 'Sai', '2025-12-22', 'Pending'),
-								(3, 'eshu', 'paladugu', '2026-03-12', 'Completed'),
-								(4, 'Sandhya', 'uppala', '2026-04-23', 'Completed'),
-								(5, 'radha', 'uppala','2024-08-24','Completed'),
-								(6,'sravya','nataraj','2032-04-23','Packed'),
-								(7,'mouni', 'devara',  '2032-03-21', 'shifted'),
-								(8,'pavani','bhagya','2012-02-19','Posted'),
-								(9,'vijaya','musala', '2012-09-18','Pending'),
-								(10,'souji', 'mata','2013-04-19', 'posted')
+SELECT * FROM Customer
+
+CREATE TABLE Orders(
+	Order_Id		INT			PRIMARY KEY,
+	Customer_id		INT			 NOT NULL,
+	Order_date		DATETIME	NOT NULL,
+	Order_status    INT         NOT NULL
 
 
-SELECT * FROM Customer_order;
+)
+  
 
+INSERT INTO Orders VALUES
+		(101,1,'2024-01-10',1),
+		(102,2,'2024-01-12',4),
+		(103,3,'2024-01-15',2),
+		(104,4,'2024-01-18',1),
+		(105,5,'2024-01-20',4),
+		(106,1,'2024-01-22',3),
+		(107,2,'2024-01-24',1),
+		(108,3,'2024-01-26',4),
+		(109,4,'2024-01-28',2),
+		(110,5,'2024-01-30',1);
 
-SELECT * FROM Customer_order WHERE Order_status= 'Pending' OR Order_status='Completed' ORDER BY Order_date DESC
+SELECT * FROM Orders
+
+SELECT O.Customer_id, O.Order_date, O.Order_Id,O.Order_status, C.first_name, C.last_name FROM Orders O
+INNER JOIN
+Customer C
+ON O.Customer_id=C.customer_Id
+WHERE Order_status=1 OR Order_status=4 ORDER BY Order_date DESC
