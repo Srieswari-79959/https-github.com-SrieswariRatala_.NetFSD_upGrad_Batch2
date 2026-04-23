@@ -1,1 +1,0 @@
-export var PASS_MARKS =40;
